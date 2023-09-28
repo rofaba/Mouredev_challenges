@@ -11,9 +11,9 @@ function esPrimo(n){
         console.log("los números primos son mayores que 1")
         return false
     }
-    if (n === 2 || n === 3) 
+    if (n === 2 || n === 3 || n === 5 || n === 7) 
     return true
-    if (n > 3) {
+    if (n > 3 && n !== 7 && n !== 5) {
         
         if(n % 2 === 0 || n % 3 === 0 || n % 5 === 0 || n % 7 === 0) {
             return false
@@ -22,14 +22,14 @@ function esPrimo(n){
     } 
 }
 
-console.log(esPrimo(1))
-console.log("-------------------")
-console.log(esPrimo(2))
-console.log(esPrimo(3))
-console.log(esPrimo(9))
-console.log(esPrimo(11))
-console.log(esPrimo(15))
-console.log("-------------------")
-console.log(esPrimo(19))
-console.log(esPrimo(49))
-console.log(esPrimo(89))
+// imprimir los primos entre 1 y 100 
+
+function printPrimes(){
+        for(let j = 1; j <= 100; j++){
+            if(esPrimo(j)){
+                console.log(j)
+            }
+        } 
+}
+
+printPrimes()
