@@ -15,7 +15,7 @@ function decimalToBinary(entero){
 
 console.log(decimalToBinary(0))
 
-console.log(decimalToBinary(1))
+console.log(decimalToBinary(100))
 
 console.log(decimalToBinary(2))
 
