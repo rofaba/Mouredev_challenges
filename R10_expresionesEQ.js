@@ -47,4 +47,3 @@ console.log(equilibrada("{  por ejemplo, 5675 elimine &%# [( dfgrgar )!!! ]}    
 console.log(equilibrada(" ()[]{}"))
 
 console.log(equilibrada(" ([{}]) "))
-
