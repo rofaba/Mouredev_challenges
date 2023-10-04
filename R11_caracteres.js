@@ -9,6 +9,7 @@ e imprima otras dos cadenas como salida (out1, out2).
 */
 
 function filter(str1, str2){
+    console.log(str1, str2);
     let wordA = str1.split("") 
     let wordB = str2.split("")
 
@@ -28,6 +29,7 @@ function filter(str1, str2){
     let rB = str2result.join("")
 
     return [rA, rB]
+    
 }
 
 
