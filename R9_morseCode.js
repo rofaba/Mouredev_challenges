@@ -48,7 +48,7 @@ function morseTranslate(s) {
     8: "---..",
     9: "----.",
   };
-  
+
   const morseAlfabeto = {
     ".-": "A",
     "-...": "B",
@@ -87,15 +87,30 @@ function morseTranslate(s) {
     "---..": "8",
     "----.": "9",
   };
-//primer paso solo alfabeto a morse
+  //primer paso solo alfabeto a morse
 
- let respuesta = []
- let translate = s.toUpperCase().split("")
- console.log(translate)
- translate.forEach(function(element){
- respuesta.push(codigoMorse[element])
-  })
-return respuesta.join(" ")
+  let respuesta = [];
+  let translate = s.toUpperCase().split("");
+
+  if (translate[0].includes("-") || translate[0].includes(".")) {
+    translate = s.toUpperCase().split(" ");
+    translate.forEach(function (element) {
+    respuesta.push(morseAlfabeto[element]);
+
+    });
+
+  } else { 
+    
+    translate.forEach(function (element) {
+      respuesta.push(codigoMorse[element]);
+    });
+  }
+
+  return respuesta.join(" ");
 }
 
-console.log(morseTranslate("Pato"))
+console.log(morseTranslate("Pato"));
+
+console.log(morseTranslate("cuarenta 7ups"));
+
+console.log(morseTranslate("....  ---  .-..  .- /  --  ..-  -.  -..  ---"));
