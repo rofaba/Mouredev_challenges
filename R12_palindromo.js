@@ -27,6 +27,5 @@ function palindromo(s){
         return true
     } else return false
 }
-
 console.log(palindromo("Ana lleva al oso la avellana."))
 console.log(palindromo("roma ni se conoce sin oro ni se conoce sin amor"))
