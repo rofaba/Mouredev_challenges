@@ -20,3 +20,20 @@ function esArmstrong(number){
         return false
     }
 }
+
+//solucion con ciclo diferente y sin usar el objeto Math
+
+const result = testNumber => {
+    let manageNumber = testNumber.toString().split("")
+    let total = 0
+    let digits = manageNumber.length
+    manageNumber.forEach( elem =>{
+        total += elem ** digits
+    }) 
+    if (total == testNumber) return true
+    else return false
+    } 
+
+
+console.log(result(555))
+console.log(result(153))
