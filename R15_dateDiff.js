@@ -1,13 +1,12 @@
-
 /*
 
 Reto #15: ¿CUÁNTOS DÍAS?
 
 Crea una función que calcule y retorne cuántos días hay entre dos cadenas de texto que representen fechas.
-- Una cadena de texto que representa una fecha tiene el formato "dd/MM/yyyy".
-- La función recibirá dos String y retornará un Int.
-- La diferencia en días será absoluta (no importa el orden de las fechas).
-- Si una de las dos cadenas de texto no representa una fecha correcta se lanzará una excepción.
+Una cadena de texto que representa una fecha tiene el formato "dd/MM/yyyy".
+La función recibirá dos String y retornará un Int.
+La diferencia en días será absoluta (no importa el orden de las fechas).
+Si una de las dos cadenas de texto no representa una fecha correcta se lanzará una excepción.
 
 */
 
@@ -29,8 +28,8 @@ if(dateRegex.test(str1) && dateRegex.test(str2)){
             let diffabs = Math.abs(date1 - date2)
             let days = diffabs/(1000*60*60*24)
             console.log(days)
-        } else console.log("Fecha no válida")
+        } else console.log("Fecha en rango no válido para operación")
 
 } else throw "Formato de fecha erroneo, use dd/mm/yyyy"    
 }
-dateDiff("27/07/1975", "30/08/2013")
+dateDiff("12/04/1980", "23/02/2012")
