@@ -33,7 +33,4 @@ if(dateRegex.test(str1) && dateRegex.test(str2)){
 
 } else throw "Formato de fecha erroneo, use dd/mm/yyyy"    
 }
-
 dateDiff("27/07/1975", "30/08/2013")
-
-//dateDiff("08/03/1975", "17/01/2012")
